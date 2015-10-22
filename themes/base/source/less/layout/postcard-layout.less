@@ -1,0 +1,147 @@
+//
+// Postcard Layout
+// --------------------------------------------------
+.postcard-layout{
+
+	// Postcard
+	// --------------------------------------------------
+	.postcard{
+		border: 1px solid #cdcccd;
+		background-color: #fff;
+		display: flex;
+		align-items: center;
+		.clearfix();
+
+		& + .postcard{
+			margin-top: 15px;
+		}
+
+		&.short-height{
+			.postcard-right,
+			.postcard-center{
+				height: 185px;
+			}
+
+			.postcard-center{
+				p{
+					font-size: 16px;
+				}
+
+				a{
+					strong{
+						font-weight: 600;
+					}
+				}
+			}
+		}
+	}
+
+	// Postcard segments
+	// --------------------------------------------------
+	.postcard-left,
+	.postcard-center,
+	.postcard-right{
+		float: left;
+		padding-left: 30px;
+		padding-right: 30px;
+		padding-top: 0;
+
+		&.no-padding{
+			padding: 0;
+		}
+
+		&.border-left{
+			border-left: 1px solid #cdcccd;
+		}
+	}
+
+	// Postcard left
+	// -------------------------
+	.postcard-left{
+		width: 170px;
+		position: relative;
+
+		.postcard-img{
+			display: block;
+		}
+
+		.postcard-label{
+			font-family: @font-family-heading;
+			text-align: center;
+			font-size: 20px;
+			color: #fff;
+			line-height: 1.3;
+			letter-spacing: 1px;
+			font-weight: 700;
+			background-color: rgba(45,43,44,0.9);
+			padding: 12px 0;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+		}
+	}
+
+	// Postcard center
+	// -------------------------
+	.postcard-center{
+		width: 480px;
+		height: 195px;
+		padding-bottom: 0;
+
+		&.full-width{
+			width: 675px;
+		}
+	}
+
+	// Postcard right
+	// -------------------------
+	.postcard-right{
+		width: 195px;
+		height: 195px;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+
+	// Generic typography
+	// --------------------------------------------------
+	h2{
+		font-size: 22px;
+		line-height: 1.2;
+		font-weight: 700;
+		margin-bottom: 15px;
+
+		a{
+			color: #231f20;
+
+			&:hover{
+				color: @brand-primary;
+			}
+		}
+	}
+
+	h3{
+		font-size: 20px;
+		font-weight: 700;
+		margin-bottom: 10px;
+
+		svg{
+			vertical-align: middle;
+			margin-right: 5px;
+		}
+	}
+
+	p{
+		font-family: @font-family-heading;
+		font-size: 15px;
+		margin-bottom: 0;
+
+		& + p{
+			margin-top: 5px;
+		}
+	}
+
+	.btn + .btn{
+		margin-top: 15px;
+	}
+}

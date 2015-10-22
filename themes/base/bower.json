@@ -1,0 +1,7 @@
+{
+    "name": "bower",
+    "version": "0.0.0",
+    "dependencies": {
+        "flare": "~1.0.0"
+    }
+}

@@ -1,0 +1,308 @@
+// ==================================================
+// Forms
+// ==================================================
+
+//
+// Form control
+// --------------------------------------------------
+.form-control {
+	//** Set form transition
+	.transition(~"border-color 200ms linear, background-color 200ms linear, box-shadow 200ms linear");
+
+	font-family: @input-font-family;
+	color: @input-color;
+	height: auto;
+	line-height: @input-line-height;
+	padding: @input-padding;
+	border-radius: @input-border-radius;
+	border: 1px solid @input-border-colour;
+	font-size: @input-font-size;
+	font-weight: @input-font-weight;
+	background-color: @input-bg;
+	.box-shadow(none);
+
+	&::-moz-placeholder {
+		color: @input-color-placeholder; // Firefox
+		opacity: 1;
+	}
+	// See https://github.com/twbs/bootstrap/pull/11526
+	&:-ms-input-placeholder {
+		color: @input-color-placeholder;
+	}
+	// Internet Explorer 10+
+	&::-webkit-input-placeholder {
+		color: @input-color-placeholder;
+	}
+
+	&:active,
+	&:focus {
+		.box-shadow(none);
+		border-color: @input-border-focus;
+
+		&[disabled],
+		&[readonly]{
+			background-color: @input-bg-disabled;
+		}
+	}
+
+	&:focus{
+		box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+	}
+
+	&.form-error{
+		border-color: @brand-primary;
+	}
+}
+
+//Remove field shadow from ios safari/chrome
+input.form-control,
+textarea.form-control {
+	-webkit-appearance: none;
+}
+
+textarea.form-control {
+	height: @textarea-height;
+	padding: @textarea-padding;
+	resize: none;
+}
+
+
+// Label
+// --------------------------------------------------
+label{
+	font-family: @font-family-heading;
+	font-size: @label-font-size;
+	font-weight: @label-font-weight;
+	line-height: @label-line-height;
+	color: @label-color;
+	text-transform: @label-text-transform;
+	letter-spacing: @label-letter-spacing;
+	margin-bottom: @label-margin-bottom;
+
+	span{
+		color: #000;
+		margin-left: 3px;
+	}
+
+	&.floating-label{
+		font-size: 14px;
+		font-weight: 400;
+		color: #808184;
+		position: absolute;
+		right: -20px;
+		bottom: 10px;
+		margin-bottom: 0;
+	}
+}
+
+//
+// Legend
+// --------------------------------------------------
+legend{
+	font-size: 22px;
+	line-height: 1.4;
+	font-weight: 700;
+	margin-bottom: 25px;
+	border-bottom: 0;
+}
+
+// Select
+// --------------------------------------------------
+.form-group-select{
+	position: relative;
+
+	.form-control{
+		padding-right: 32px;
+		color: @input-color-placeholder;
+		appearance: none;
+		-moz-appearance: none;
+		-webkit-appearance: none;
+	}
+
+	select::-ms-expand {
+		display: none;
+	}
+
+	svg{
+		fill: @input-color-placeholder;
+		position: absolute;
+		right: 12px;
+		top: 50%;
+		margin-top: -4px;
+		pointer-events: none;
+	}
+}
+
+
+// Form group
+// --------------------------------------------------
+.form-group {
+	margin-bottom: 20px;
+	text-align: left;
+	position: relative;
+	z-index: 0;
+
+	&.no-margin{
+		margin-bottom: 0;
+	}
+
+	&.form-group-short{
+		margin-bottom: 15px;
+	}
+
+	.alert{
+		padding-top: 8px;
+		padding-bottom: 8px;
+	}
+}
+
+
+// Form submit
+// --------------------------------------------------
+.form-submit {
+	margin-top: @form-submit-margin-top;
+	.clearfix();
+
+	.btn{
+		margin: 0;
+		float: right;
+
+		& + .btn{
+			margin-right: 15px;
+		}
+	}
+
+	.btn,
+	.btn.btn-lg{
+		padding-left: 70px;
+		padding-right: 70px;
+	}
+}
+
+// Checkboxes
+// --------------------------------------------------
+/* Base for label styling */
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+	position: absolute;
+	left: -9999px;
+}
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+	font-family: @font-family-base;
+	font-weight: 400;
+	color: #636363;
+	font-size: 15px;
+	position: relative;
+	padding-left: 40px;
+	line-height: 30px;
+	cursor: pointer;
+	display: inline-block;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+/* checkbox aspect */
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+	content: '';
+	position: absolute;
+	left: 0; top: 0;
+	width: 30px;
+	height: 30px;
+	border: 1px solid @input-border;
+	.transition(background-color 200ms);
+}
+/* checked mark aspect */
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 30px;
+	height: 30px;
+}
+/* checked mark aspect changes */
+[type="checkbox"]:not(:checked) + label:after {
+	.opacity(0);
+	.scale(0);
+}
+[type="checkbox"]:checked + label:after {
+	.opacity(1);
+	.scale(0.5);
+}
+/* disabled checkbox */
+[type="checkbox"]:disabled:not(:checked) + label:before,
+[type="checkbox"]:disabled:checked + label:before {
+	box-shadow: none;
+	border-color: @input-border;
+	background-color: #ddd;
+}
+[type="checkbox"]:disabled:checked + label:after {
+	color: #999;
+}
+[type="checkbox"]:disabled + label {
+	color: #aaa;
+}
+
+// Form errors
+// --------------------------------------------------
+@keyframes push-down-fade {
+	0% {
+		.opacity(0);
+		.translate(0, -10px);
+	}
+
+	100% {
+		.opacity(1);
+		.translate(0, 0);
+	}
+}
+
+.error-container{
+	width: auto;
+	background-color: @brand-error;
+	position: absolute;
+	top: -10px;
+	right: 7px;
+	z-index: 99999;
+	pointer-events: none;
+	padding: 4px 10px 5px 10px;
+	border-radius: 3px;
+	display: none;
+	animation: push-down-fade 400ms 1;
+	transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+	&.filled {
+		display: block;
+	}
+
+	.message-wrap{
+		p{
+			font-size: 11px;
+			line-height: 16px;
+			font-weight: 400;
+			color: #fff;
+			margin-bottom: 0;
+		}
+	}
+
+	&::after {
+		content: '';
+		width: 0;
+		height: 0;
+		width: 0;
+		border-left: 5px solid transparent;
+		border-right: 5px solid transparent;
+		border-top: 5px solid @brand-error;
+		position: absolute;
+		right: 10px;
+		bottom: -5px;
+		z-index: -25;
+	}
+}

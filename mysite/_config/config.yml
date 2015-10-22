@@ -1,0 +1,27 @@
+---
+Name: mysite
+After: 'framework/*','cms/*'
+---
+
+SSViewer:
+  theme: 'base'
+
+SiteTree:
+  create_default_pages: false
+
+Image:
+  force_resample: true
+
+BetterNavigator:
+    developers:
+      - 'dev@littlegiant.co.nz'
+      - 'webmaster@littlegiant.co.nz'
+
+Member:
+  log_num_visits: false
+  log_last_visited: false
+
+
+Seeder:
+  providers:
+    - RandomObjectProvider

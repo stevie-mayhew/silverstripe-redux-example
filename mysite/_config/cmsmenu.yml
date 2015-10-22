@@ -1,0 +1,26 @@
+---
+Name: 'cmsmenu'
+After: 'cms/*', 'framework/*'
+---
+
+LeftAndMain:
+  menu_groups:
+    Events:
+      - EventAdmin
+    Other:
+      - AssetAdmin
+      - ReportAdmin
+      - CMSPagesController
+      - SecurityAdmin
+      - CMSSettingsController
+      - Help
+  cms_menu_color: '#fff'
+  cms_menu_background: '#23282d'
+  cms_menu_active_text_color: '#fff'
+  cms_menu_active_background_color: '#ee9601'
+
+SiteConfig:
+  cms_logo: '/themes/base/production/images/cms_logo.png'
+
+EventAdmin:
+ menu_icon_class: 'fa fa-pencil'

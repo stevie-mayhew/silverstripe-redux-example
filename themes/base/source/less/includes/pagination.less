@@ -1,0 +1,65 @@
+//
+// Pagination
+// --------------------------------------------------
+.pagination{
+	padding-top: 61px;
+	.clearfix();
+
+	.pagination-block{
+		font-family: @font-family-heading;
+		font-size: 14px;
+		font-weight: 600;
+		line-height: 38px;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		text-align: center;
+		color: #585858;
+		background-color: #fff;
+		margin-top: 4px;
+		border: 1px solid #cdcccd;
+		width: 40px;
+		height: 40px;
+		cursor: pointer;
+		float: left;
+		.transition(~"color 200ms, border-color 200ms, background-color 200ms");
+
+		& + .pagination-block{
+			margin-left: 5px;
+		}
+
+		&:hover{
+			color: #fff;
+			background-color: #cdcccd;
+		}
+
+		&.next,
+		&.prev{
+			width: auto;
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+
+		&.active{
+			background-color: @brand-primary;
+			border-color: @brand-primary;
+			color: #fff;
+
+			&:hover{
+				background-color: @brand-primary;
+				border-color: @brand-primary;
+			}
+		}
+	}
+
+	// todo merge these
+	span.pagination-block{
+		background-color: @brand-primary;
+		border-color: @brand-primary;
+		color: #fff;
+
+		&:hover{
+			background-color: @brand-primary;
+			border-color: @brand-primary;
+		}
+	}
+}

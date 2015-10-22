@@ -1,0 +1,39 @@
+---
+Name: seeder
+After: 'framework/*', 'cms/*'
+---
+
+suppress_warnings: true
+
+---
+Only:
+  environment: 'dev'
+---
+
+Seeder:
+  create:
+    Country:
+      count: 244
+      fields:
+        Title: faker(words,2)
+    EventType:
+      count: 10
+      fields:
+        Title: faker(words,3)
+    EventsPage:
+      count: 1
+      fields:
+        Title: 'Events'
+        URLSegment: 'events'
+    EventPage:
+      count: 500
+      fields:
+        Approved: 1
+        Featured: 0
+        LocationName: 'faker(words,2)'
+        LocationAddress: 'faker(words,3)'
+        StartTime: 'date(+10 month)'
+        EndTime: 'date(+10 month)'
+        Image: image(400,600)
+        Country: RandomObject(Country)
+        EventType: RandomObject(EventType)

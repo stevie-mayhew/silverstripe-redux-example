@@ -1,0 +1,37 @@
+//
+// Burger Container
+// --------------------------------------------------
+
+//** Burger style content container used on the Events and Businesses pages
+.burger-container{
+	margin-bottom: 30px;
+
+	& + .burger-container{
+		padding-top: 30px;
+		border-top: 1px solid #cdcccd;
+	}
+
+	h3{
+		font-size: 20px;
+		font-weight: 700;
+		margin-bottom: 15px;
+	}
+
+	p{
+		font-family: @font-family-heading;
+		margin-bottom: 0;
+
+		& + p{
+			margin-top: 15px;
+		}
+	}
+
+	i{
+		vertical-align: middle;
+		margin-right: 5px;
+	}
+}
+
+.burger-wrapper{
+	padding-left: 15px;
+}

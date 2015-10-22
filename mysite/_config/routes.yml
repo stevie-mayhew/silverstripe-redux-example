@@ -1,0 +1,6 @@
+---
+name: routes
+---
+Director:
+  rules:
+    'api/$Action/$ID': WebServiceController

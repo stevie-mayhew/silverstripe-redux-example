@@ -1,0 +1,168 @@
+// ==================================================
+// Buttons
+// ==================================================
+
+//
+// Button Mixin
+// --------------------------------------------------
+.button(@name, @color, @color-secondary){
+	&.btn-@{name} {
+		color: #fff;
+		background-color: @color;
+		border-color: transparent;
+
+		&:hover{
+			color: #fff;
+			background-color: @color-secondary;
+		}
+
+		&:active{
+			.scale(0.95);
+		}
+	}
+}
+
+//
+// Base Style
+// --------------------------------------------------
+.btn {
+	//** Set button colours
+	.button(primary, @brand-primary, lighten(@brand-primary, 5%));
+	.button(secondary, @brand-secondary, lighten(@brand-secondary, 10%));
+	.button(danger, @brand-danger, #e63c45);
+	.button(white, #fff, @brand-primary);
+	//** Set button transition
+	.transition(~"color 200ms, background-color 200ms, border-color 200ms, transform 75ms");
+
+
+	font-family: @btn-font-family;
+	font-size: @btn-font-size;
+	color: #fff;
+	font-weight: @btn-font-weight;
+	text-transform: @btn-text-transform;
+	background-color: transparent;
+	height: @btn-height;
+	line-height: @btn-line-height; // Font baseline is slightly off
+	letter-spacing: @btn-letter-spacing;
+	padding: 0 @btn-hrz-padding;
+	border-radius: @btn-border-radius;
+	border: none;
+	text-align: center;
+	outline: 0;
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+	z-index: 0;
+	overflow: hidden;
+
+	//** Large button variation
+	&.btn-lg{
+		font-size: @btn-font-size-lg;
+		line-height: @btn-line-height-lg;
+		height: @btn-height-lg;
+		padding: 0 @btn-hrz-padding-lg;
+	}
+
+	&.btn-block{
+		width: 100%;
+		display: block;
+		padding-left: 0;
+		padding-right: 0;
+
+		&.btn-lg{
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+
+	svg{
+		vertical-align: middle;
+		margin-left: 10px;
+	}
+
+	//** White button bespoke variant
+	&.btn-white{
+		color: #585858;
+		border: 1px solid @input-border;
+
+		&:hover{
+			color: #fff;
+			border-color: @brand-primary;
+		}
+	}
+
+	//
+	// Social login buttons
+	// --------------------------------------------------
+	&.btn-social{
+		font-size: 16px;
+		font-weight: 600;
+		letter-spacing: 0;
+		text-transform: none;
+		width: 100%;
+		display: block;
+		padding-right: 0;
+		padding-left: @btn-height;
+
+		&:hover,
+		&:active,
+		&:focus{
+			color: #fff;
+		}
+
+		&:active{
+			.scale(0.95);
+		}
+
+		& + .btn-social{
+			margin-top: 15px;
+		}
+
+		span{
+			text-align: center;
+			//** reset inline-block elements
+			font-size: 0;
+			display: block;
+			height: @btn-height;
+			width: @btn-height;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-color: rgba(0,0,0,0.12);
+		}
+
+		svg{
+			margin: 0;
+			vertical-align: middle;
+		}
+
+		&.btn-lg{
+			padding-left: @btn-height-lg;
+
+			span{
+				height: @btn-height-lg;
+				width: @btn-height-lg;
+			}
+		}
+	}
+
+	//** Facebook button
+	//** Used for Facebook sign in
+	&.btn-facebook{
+		background-color: #43649e;
+
+		&:hover{
+			background-color: lighten(#43649e, 6%);
+		}
+	}
+
+	//** LinkedIn button
+	//** Used for LinkedIn sign in
+	&.btn-linkedin{
+		background-color: #1fa7df;
+
+		&:hover{
+			background-color: lighten(#1fa7df, 6%);
+		}
+	}
+}

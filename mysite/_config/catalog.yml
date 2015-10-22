@@ -1,0 +1,10 @@
+---
+Name: catalog
+After: 'framework/*','cms/*'
+---
+
+EventPage:
+  extensions:
+    - CatalogPageExtension
+  parentClass:
+    - EventsPage
