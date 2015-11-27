@@ -9,8 +9,7 @@ class EventType extends DataObject {
      * @var array
      */
     private static $db = array(
-        'Title' => 'Varchar(256)',
-        'ImportID' => 'Int'
+        'Title' => 'Varchar(256)'
     );
 
     /**
