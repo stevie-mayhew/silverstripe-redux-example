@@ -26,7 +26,7 @@ Seeder:
         Title: 'Events'
         URLSegment: 'events'
     EventPage:
-      count: 500
+      count: 100
       fields:
         Approved: 1
         Featured: 0
@@ -35,5 +35,6 @@ Seeder:
         StartTime: 'date(+10 month)'
         EndTime: 'date(+10 month)'
         Image: image(400,600)
-        Country: RandomObject(Country)
-        EventType: RandomObject(EventType)
+        Country: Random(Country)
+        EventType: Random(EventType)
+        Parent: First(EventsPage)

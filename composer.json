@@ -1,11 +1,5 @@
 {
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "http://packages:satis@packages.littlegiantdev.co.nz"
-        }
-    ],
-    "name": "littlegiant/installer",
+    "name": "littlegiant/redux",
     "require": {
         "php": ">=5.3.2",
         "silverstripe/cms": "~3.1.15",
@@ -15,7 +9,7 @@
         "silverstripe-australia/grouped-cms-menu": "~2.2.0",
         "unclecheese/betterbuttons": "~1.2.0",
         "ryanpotter/silverstripe-cms-theme": "~0.3.0",
-        "littlegiant/silverstripe-seeder": "1.0.0"
+        "littlegiant/silverstripe-seeder": "~1.0.0"
     },
     "require-dev": {
         "gdmedia/ss-auto-git-ignore": "~0.0.1"

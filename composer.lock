@@ -4,22 +4,25 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "188c48b40ae76ea00f4052368d60b1c0",
-    "content-hash": "7d6a75de0ebbf653a8a4567aabdbed44",
+    "hash": "dec1e3c1231264365d2edf922f5fbcf5",
+    "content-hash": "737293728a259f65fa09cf8fd9c4a4b7",
     "packages": [
         {
             "name": "composer/installers",
-            "version": "v1.0.21",
+            "version": "v1.0.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "d64e23fce42a4063d63262b19b8e7c0f3b5e4c45"
+                "reference": "bd9b14f094c89c8b5804a4e41edeb7853bb85046"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/d64e23fce42a4063d63262b19b8e7c0f3b5e4c45",
-                "reference": "d64e23fce42a4063d63262b19b8e7c0f3b5e4c45",
+                "url": "https://api.github.com/repos/composer/installers/zipball/bd9b14f094c89c8b5804a4e41edeb7853bb85046",
+                "reference": "bd9b14f094c89c8b5804a4e41edeb7853bb85046",
                 "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "1.0.0"
             },
             "replace": {
                 "roundcube/plugin-installer": "*",
@@ -29,9 +32,9 @@
                 "composer/composer": "1.0.*@dev",
                 "phpunit/phpunit": "4.1.*"
             },
-            "type": "composer-installer",
+            "type": "composer-plugin",
             "extra": {
-                "class": "Composer\\Installers\\Installer",
+                "class": "Composer\\Installers\\Plugin",
                 "branch-alias": {
                     "dev-master": "1.0-dev"
                 }
@@ -100,7 +103,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2015-02-18 17:17:01"
+            "time": "2015-10-29 23:28:48"
         },
         {
             "name": "fzaninotto/faker",
@@ -276,21 +279,22 @@
         },
         {
             "name": "littlegiant/silverstripe-seeder",
-            "version": "1.0.0",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Little-Giant/silverstripe-seeder.git",
-                "reference": "491c08d9421824c56c9f12972d2dfe8544108f69"
+                "reference": "884a18d4cc20b651eb4e7db48d127cb3cac97fb6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Little-Giant/silverstripe-seeder/zipball/491c08d9421824c56c9f12972d2dfe8544108f69",
-                "reference": "491c08d9421824c56c9f12972d2dfe8544108f69",
+                "url": "https://api.github.com/repos/Little-Giant/silverstripe-seeder/zipball/884a18d4cc20b651eb4e7db48d127cb3cac97fb6",
+                "reference": "884a18d4cc20b651eb4e7db48d127cb3cac97fb6",
                 "shasum": ""
             },
             "require": {
                 "fzaninotto/faker": "^1.5",
                 "littlegiant/silverstripe-batchwrite": "^0.2.2",
+                "silverstripe/cms": "~3.1",
                 "symfony/console": "^2.7"
             },
             "type": "silverstripe-module",
@@ -299,12 +303,12 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "BSD-2-Clause"
+                "MIT"
             ],
             "authors": [
                 {
-                    "name": "Little Giant",
-                    "email": "webmaster@littlegiant.co.nz"
+                    "name": "Chris Barrett",
+                    "email": "chris.barrett@littlegiant.co.nz"
                 }
             ],
             "description": "Seed data objects for dev",
@@ -314,7 +318,7 @@
                 "seed",
                 "silverstripe"
             ],
-            "time": "2015-10-15 01:09:49"
+            "time": "2015-11-26 02:48:49"
         },
         {
             "name": "ryanpotter/silverstripe-cms-theme",
@@ -361,17 +365,17 @@
         },
         {
             "name": "silverstripe-australia/grouped-cms-menu",
-            "version": "2.2.2",
+            "version": "2.2.3",
             "target-dir": "grouped-cms-menu",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe-australia/silverstripe-grouped-cms-menu.git",
-                "reference": "5de802c61ae0a5245ec72c759ba4e52a3a56382f"
+                "reference": "0a2c7bd620676a1ab613a7db73d0bb8ad3a8a53d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe-australia/silverstripe-grouped-cms-menu/zipball/5de802c61ae0a5245ec72c759ba4e52a3a56382f",
-                "reference": "5de802c61ae0a5245ec72c759ba4e52a3a56382f",
+                "url": "https://api.github.com/repos/silverstripe-australia/silverstripe-grouped-cms-menu/zipball/0a2c7bd620676a1ab613a7db73d0bb8ad3a8a53d",
+                "reference": "0a2c7bd620676a1ab613a7db73d0bb8ad3a8a53d",
                 "shasum": ""
             },
             "require": {
@@ -403,20 +407,20 @@
                 "module",
                 "silverstripe"
             ],
-            "time": "2015-08-25 21:27:55"
+            "time": "2015-11-04 20:57:04"
         },
         {
             "name": "silverstripe/cms",
-            "version": "3.1.15",
+            "version": "3.1.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-cms.git",
-                "reference": "0df0f35278bf25154a7946ecc555705582a23748"
+                "reference": "592588333026502b4968b1837d5725fbe7252745"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-cms/zipball/0df0f35278bf25154a7946ecc555705582a23748",
-                "reference": "0df0f35278bf25154a7946ecc555705582a23748",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-cms/zipball/592588333026502b4968b1837d5725fbe7252745",
+                "reference": "592588333026502b4968b1837d5725fbe7252745",
                 "shasum": ""
             },
             "require": {
@@ -450,20 +454,20 @@
                 "cms",
                 "silverstripe"
             ],
-            "time": "2015-09-18 02:21:19"
+            "time": "2015-11-16 02:08:39"
         },
         {
             "name": "silverstripe/framework",
-            "version": "3.1.15",
+            "version": "3.1.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-framework.git",
-                "reference": "c2a407a01b362981d070d6062fef52c8679e4a2b"
+                "reference": "2e6469956fa76513c6c9c70587c806f095ddb6d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-framework/zipball/c2a407a01b362981d070d6062fef52c8679e4a2b",
-                "reference": "c2a407a01b362981d070d6062fef52c8679e4a2b",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-framework/zipball/2e6469956fa76513c6c9c70587c806f095ddb6d7",
+                "reference": "2e6469956fa76513c6c9c70587c806f095ddb6d7",
                 "shasum": ""
             },
             "require": {
@@ -499,20 +503,20 @@
                 "framework",
                 "silverstripe"
             ],
-            "time": "2015-09-18 02:51:04"
+            "time": "2015-11-16 02:20:30"
         },
         {
             "name": "symfony/console",
-            "version": "v2.7.5",
+            "version": "v2.7.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "06cb17c013a82f94a3d840682b49425cd00a2161"
+                "reference": "16bb1cb86df43c90931df65f529e7ebd79636750"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/06cb17c013a82f94a3d840682b49425cd00a2161",
-                "reference": "06cb17c013a82f94a3d840682b49425cd00a2161",
+                "url": "https://api.github.com/repos/symfony/console/zipball/16bb1cb86df43c90931df65f529e7ebd79636750",
+                "reference": "16bb1cb86df43c90931df65f529e7ebd79636750",
                 "shasum": ""
             },
             "require": {
@@ -521,7 +525,6 @@
             "require-dev": {
                 "psr/log": "~1.0",
                 "symfony/event-dispatcher": "~2.1",
-                "symfony/phpunit-bridge": "~2.7",
                 "symfony/process": "~2.1"
             },
             "suggest": {
@@ -538,7 +541,10 @@
             "autoload": {
                 "psr-4": {
                     "Symfony\\Component\\Console\\": ""
-                }
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -556,7 +562,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2015-09-25 08:32:23"
+            "time": "2015-11-18 09:54:26"
         },
         {
             "name": "unclecheese/betterbuttons",

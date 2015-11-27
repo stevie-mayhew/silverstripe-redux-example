@@ -20,8 +20,3 @@ BetterNavigator:
 Member:
   log_num_visits: false
   log_last_visited: false
-
-
-Seeder:
-  providers:
-    - RandomObjectProvider
